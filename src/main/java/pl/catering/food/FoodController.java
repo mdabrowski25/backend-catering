@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/food")
+@ResponseStatus(HttpStatus.OK)
 public class FoodController {
     private final FoodRepository foodRepository;
 

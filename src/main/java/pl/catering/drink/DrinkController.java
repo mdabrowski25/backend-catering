@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/drink")
+@CrossOrigin
 @ResponseStatus(HttpStatus.OK)
 public class DrinkController {
     private final DrinkRepository drinkRepository;
