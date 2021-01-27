@@ -15,8 +15,7 @@ public class Contact {
     private String email;
     private String firstname;
     private String lastname;
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    private ZonedDateTime postDateTime;
+    private String postDateTime;
     @Column(length = 1200)
     private String contactMessage;
 
@@ -26,7 +25,7 @@ public class Contact {
         this.contactMessage = contactMessage;
     }
 
-    public Contact(String email, String firstname, String lastname, ZonedDateTime postDateTime, String contactMessage) {
+    public Contact(String email, String firstname, String lastname, String postDateTime, String contactMessage) {
         this.email = email;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -53,10 +52,6 @@ public class Contact {
         return lastname;
     }
 
-    public ZonedDateTime getPostDateTime() {
-        return postDateTime;
-    }
-
     public String getContactMessage() {
         return contactMessage;
     }
@@ -77,11 +72,15 @@ public class Contact {
         this.lastname = lastname;
     }
 
-    public void setPostDateTime(ZonedDateTime postDateTime) {
-        this.postDateTime = postDateTime;
-    }
-
     public void setContactMessage(String contactMessage) {
         this.contactMessage = contactMessage;
+    }
+
+    public String getPostDateTime() {
+        return postDateTime;
+    }
+
+    public void setPostDateTime(String postDateTime) {
+        this.postDateTime = postDateTime;
     }
 }

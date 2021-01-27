@@ -22,11 +22,10 @@ public class CateringOrder {
     private double price;
     private String address;
     private String telephoneNumber;
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    private ZonedDateTime date;
+    private String date;
 
     public CateringOrder(String firstname, String lastname, List<Drink> drinkOrdered, List<Food> foodOrdered,
-                         double price, String address, String telephoneNumber, ZonedDateTime date) {
+                         double price, String address, String telephoneNumber, String date) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.drinkOrdered = drinkOrdered;
@@ -40,11 +39,11 @@ public class CateringOrder {
     public CateringOrder() {
     }
 
-    public ZonedDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(ZonedDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
