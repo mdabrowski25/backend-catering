@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cateringOrder")
-@CrossOrigin(origins = "https://frontend-catering-s-krol.netlify.app")
+@CrossOrigin
 @ResponseStatus(HttpStatus.OK)
 public class OrderController {
     private final OrderRepository orderRepository;
