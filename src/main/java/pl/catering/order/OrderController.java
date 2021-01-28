@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/cateringOrder")
 @CrossOrigin
 @ResponseStatus(HttpStatus.OK)
 public class OrderController {
-    private final OrderRepository orderRepository;
+    private OrderRepository orderRepository;
 
     public OrderController(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
