@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -15,15 +16,10 @@ public class DemoApplication {
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
+        return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins(
-                        "http://localhost:8080",
-                        "http://localhost:5555",
-                        "http://localhost:4200",
-                        "https://frontend-catering-s-krol.netlify.app/")
-                        .allowedMethods("POST", "PUT", "GET");
+                registry.addMapping("/**");
             }
         };
     }
