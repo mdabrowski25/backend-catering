@@ -22,7 +22,7 @@ public class DemoApplication {
                         "http://localhost:8080",
                         "http://localhost:5555",
                         "http://localhost:4200",
-                        "https://frontend-catering-s-krol.netlify.app")
+                        "https://frontend-catering-s-krol.netlify.app/")
                         .allowedMethods("POST", "PUT", "GET");
             }
         };
