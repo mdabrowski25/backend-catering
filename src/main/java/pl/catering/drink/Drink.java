@@ -11,9 +11,9 @@ public class Drink {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer drinkId;
     private String name;
-    private double price;
+    private Integer price;
 
-    public Drink(String name, double price) {
+    public Drink(String name, Integer price) {
         this.name = name;
         this.price = price;
     }
@@ -29,7 +29,7 @@ public class Drink {
         return name;
     }
 
-    public double getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
@@ -41,7 +41,7 @@ public class Drink {
         this.name = name;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 }
