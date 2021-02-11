@@ -7,9 +7,9 @@ import pl.catering.responses.ResponseMessage;
 import java.time.ZonedDateTime;
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/contact")
-@CrossOrigin
 @ResponseStatus(HttpStatus.OK)
 public class ContactController {
 

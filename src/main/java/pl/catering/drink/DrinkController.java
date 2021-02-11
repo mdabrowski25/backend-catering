@@ -7,9 +7,9 @@ import pl.catering.responses.ResponseMessage;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/drink")
-@CrossOrigin
 @ResponseStatus(HttpStatus.OK)
 public class DrinkController {
     private final DrinkRepository drinkRepository;
