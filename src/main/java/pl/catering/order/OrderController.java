@@ -7,7 +7,7 @@ import pl.catering.responses.ResponseMessage;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin
 @RestController
 @RequestMapping("/cateringOrder")
 @ResponseStatus(HttpStatus.OK)
